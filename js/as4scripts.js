@@ -59,7 +59,7 @@
                 newDiv.style.opacity = opacity.value * 0.01;
                 if (menu.stampNow != null){
                     newDiv.style.backgroundColor = 'transparent'; 
-                    newDiv.style.backgroundImage = `url("../images/${menu.stamps[menu.stampNow]}.png")`;
+                    newDiv.style.backgroundImage = `url("./images/${menu.stamps[menu.stampNow]}.png")`;
                 }
                 myCanvas.append(newDiv);
             }
@@ -71,7 +71,7 @@
                 menu.stampNow = null;
                 dummy.style.backgroundImage = '';
                 if(event.target.value == '#ffffff'){
-                    dummy.style.backgroundImage = 'url(../images/erase.png)';
+                    dummy.style.backgroundImage = 'url(./images/erase.png)';
                     
                 }
                 dummy.style[event.target.name] = event.target.value;
@@ -98,7 +98,7 @@
         createStampButtons: () =>{
             for (let i in menu.stamps){
                 stampsContainer.append(document.createElement('button'));
-                stampsContainer.getElementsByTagName('button')[i].style.backgroundImage = `url(../images/${menu.stamps[i]}.png)`;
+                stampsContainer.getElementsByTagName('button')[i].style.backgroundImage = `url("./images/${menu.stamps[i]}.png")`;
                 stampsContainer.getElementsByTagName('button')[i].setAttribute('name' , 'backgroundImage');
                 stampsContainer.getElementsByTagName('button')[i].addEventListener('click', function(e){
                     myDiv.changeParameters(e);

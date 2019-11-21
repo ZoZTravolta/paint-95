@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>as3</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+
+<body>
+    <div class="main" id="main">
+        <div class="menu">
+            <button id="reset" class="reset">Clear screen</button>
+            <h5>Brush</h5>
+            <div id="dummy-container" class="dummy-container">
+                <div class="sliderWidth-container">
+                    <input type="range" name="width" id="sliderWidth" class="sliderWidth" min="2" max="100" value="20"><label>W</label>
+                </div>
+                <div class="sliderHeight-container">
+                    <input type="range" name="height" id="sliderHeight"  class="sliderHeight" min="2" max="100" value="20"><label>H</label>
+                </div>
+                <div id="dummy" class="dummy"></div>
+                <input type="color" type="color" id="colorPicker" class="colorPicker" name="backgroundColor" value="#00c96b">
+                <button type="button" type="color" id="eraser" class="eraser" name="backgroundColor" value="#ffffff"></button>
+            </div>
+                                   
+            <h6>Border radius</h6>
+            <input type="range" name="border-radius" id="borderRadius"  class="borderRadius" min="0" max="100" value="100">
+            <h6>Transparency</h6>
+            <input type="range" name="opacity" id="opacity"  class="opacity" min="0" max="100" value="100">
+            
+            <h5>colors</h5>
+            <div id="palletContainer" class="palletContainer"></div>
+            
+            <h5>Stamps</h5>
+            <div class="stampsContainer" id="stampsContainer">
+
+            </div>
+            
+           
+
+        </div>
+        <div class="canvasSizeHeight">
+                <input type="range" name="height"  id="sliderCanvasHeight" min="2"  orient="vertical">
+        </div>
+        <div id="paint" class="paint">
+                
+            <!--<div class="dummy mouseCursor" id="mouseCursor"></div>-->
+
+            <div class="row top">
+                <div class="canvasSizeWidth">
+                    <input type="range" name="width1" value="500"  max='1000' id="sliderCanvasWidth" min="2" >
+                </div>
+            </div>
+           <div class="row middle">
+                <div id="myCanvas" class="myCanvas"></div>
+                <div id="borderLeft"></div>
+           </div>
+           <div class="row bottom">
+                <div id="borderBottom"></div>
+           </div>
+            
+        </div>
+    </div>
+    
+    <script src="./js/as4scripts.js"></script>   
+    
+</body>
+</html>

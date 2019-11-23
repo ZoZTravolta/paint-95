@@ -7,6 +7,7 @@ my paint 95 is built from:
 
 html:
 building the page (some elements are built in js)
+    canvas is masked from all sides by four divs, using display flex and z-index 1.
 
 js:
 1. element deceleration

@@ -9,7 +9,7 @@ html:
 building the page (some elements are built in js)
 
 js:
-1. element deceleration //////
+1. element deceleration
 2. set the Properties of the canvas size sliders
 3. declaring a new div, drawing and changing parameters
           drawing on div(){

@@ -15,11 +15,7 @@
     const opacity = document.getElementById('opacity');
 
 
-    ////set the Properties of the canvas size sliders
-    sliderCanvasWidth.setAttribute('max', document.getElementById('paint').offsetWidth -10);
-    sliderCanvasHeight.setAttribute('max', document.getElementById('paint').offsetHeight - 10);
-    sliderCanvasWidth.setAttribute('value', 500);
-    sliderCanvasHeight.setAttribute('value', 500);
+    
 
     ///// declaring a new div, drawing and changing parameters
     let myDiv ={
@@ -133,15 +129,20 @@
             myCanvas.style.width = sliderCanvasWidth.value + 'px';
             myCanvas.style.height = sliderCanvasHeight.value + 'px';
         },
+    
+        ////set the Properties of the canvas size sliders
+        setThePropertiesOfTheCanvasSizeSliders:() =>{
+            sliderCanvasWidth.setAttribute('max', document.getElementById('paint').offsetWidth -10);
+            sliderCanvasHeight.setAttribute('max', document.getElementById('paint').offsetHeight - 10);
+            sliderCanvasWidth.setAttribute('value', 500);
+            sliderCanvasHeight.setAttribute('value', 500);
+        }
     }
 
 
     menu.createStampButtons()
     menu.createColorPallet()
-
-
-
-
+    canvas.setThePropertiesOfTheCanvasSizeSliders();
 
 
     ///// event listeners////////////////
